@@ -11,27 +11,27 @@ import com.appium.baseapp.BaseTestSuite;
  */
 public class PrintTestCases {
 
-  private static boolean functionPrintFlag = false;
+	private static boolean functionPrintFlag = false;
 
-  public static void funcPrintOn(String s) {
-    functionPrintFlag = true;
-  }
+	public static void funcPrintOn(String s) {
+		functionPrintFlag = true;
+	}
 
-  public static void funcPrintOff() {
-    functionPrintFlag = false;
+	public static void funcPrintOff() {
+		functionPrintFlag = false;
 
-  }
+	}
 
-  public static void print(String s) {
-    if (!functionPrintFlag)
-      BaseTestSuite.testInfo = BaseTestSuite.testInfo + "<pre>" + s + "</pre>";// "<br/>";
+	public static void print(String s) {
+		if (!functionPrintFlag)
+			BaseTestSuite.testInfo = BaseTestSuite.testInfo + "<pre>" + s + "</pre>";// "<br/>";
 
-  }
+	}
 
-  public static String charSequence2String(CharSequence... keysToSend) {
-    StringBuilder sb = new StringBuilder();
-    for (CharSequence c : keysToSend)
-      sb.append(c);
-    return sb.toString();
-  }
+	public static String charSequence2String(CharSequence... keysToSend) {
+		StringBuilder sb = new StringBuilder();
+		for (CharSequence c : keysToSend)
+			sb.append(c);
+		return sb.toString();
+	}
 }
