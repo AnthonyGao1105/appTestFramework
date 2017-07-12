@@ -8,27 +8,11 @@ if u want to use this framework, u can folllow following steps:
 3. user "mvn clean install" to genernate the appframework.jar
 4. create new test pom project and configure the pom file like that:
 
-
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.anthony.test</groupId>
-  <artifactId>android-test</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
-
-  <name>android-test</name>
-  <url>http://maven.apache.org</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
   <dependencies>
 	<dependency>
-    <groupId>io.appium</groupId>
-    <artifactId>java-client</artifactId>
-    <version>3.4.1</version>
+    	<groupId>io.appium</groupId>
+    	<artifactId>java-client</artifactId>
+    	<version>3.4.1</version>
 	</dependency>
 	
 	<dependency>
@@ -54,8 +38,7 @@ if u want to use this framework, u can folllow following steps:
 	<artifactId>jetty-util-ajax</artifactId>
 	<version>9.3.7.v20160115</version>
 	</dependency>
-  </dependencies>
-</project>
+	
 	<dependency>
 	<groupId>net.sourceforge.jexcelapi</groupId>
 	<artifactId>jxl</artifactId>
@@ -63,7 +46,7 @@ if u want to use this framework, u can folllow following steps:
 	</dependency>
 	
   </dependencies>
-</project>
+
 
 test case example:
 
@@ -142,24 +125,6 @@ public class AppTest {
 		TestBorrowPage.borrow.click();
 		TestBorrowPage.confirmBorrow.click();
 		Assert.assertEquals(DXDBorrowPage.borrowSuccessInfo.getAppText(), "提现申请中，请注意账户余额变化！");
-	}
-	
-	/**
-	 * 用户还款
-	 * @param phone
-	 * @param pw
-	 * @param inviteCode
-	 * @throws InterruptedException
-	 */
-	@Test(priority=1)
-	
-	public void repayment() throws InterruptedException{
-		DXDHomePage.repaymentLink.click();
-		Thread.sleep(3000);
-		DXDRepaymentPage.repayNowButton.click();
-		DXDRepaymentPage.repayConvenience.click();
-		DXDRepaymentPage.repayConfirmButton.click();
-		Assert.assertEquals(DXDRepaymentPage.repaySuccessInfo.getAppText(), "银行处理中,预计10分钟内处理完成");
 	}
 	
 	@AfterMethod
