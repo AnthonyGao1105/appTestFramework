@@ -8,6 +8,8 @@ if u want to use this framework, u can folllow following steps:
 3. user "mvn clean install" to genernate the appframework.jar
 4. create new test pom project and configure the pom file like that:
 
+
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.anthony.test</groupId>
